@@ -19,14 +19,10 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({ restaurant }) => {
   return (
     <Link href={`/restaurants/${id}`} className="block">
       <div className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-200 hover:shadow-lg hover:-translate-y-1">
-        <div className="relative h-48 w-full">
-          <Image
-            src={imageUrl || '/images/restaurant-placeholder.jpg'}
-            alt={name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover"
-          />
+        <div className="relative h-48 w-full bg-gray-200">
+          <div className="h-full w-full flex items-center justify-center">
+            <span className="text-lg text-gray-600">{name}</span>
+          </div>
           {restaurant.promoCode && (
             <div className="absolute top-0 left-0 bg-orange-500 text-white px-3 py-1 text-xs font-bold">
               {restaurant.promoCode}
