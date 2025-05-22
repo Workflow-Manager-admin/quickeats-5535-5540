@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-=======
 
 // PUBLIC_INTERFACE
 interface HeaderProps {
